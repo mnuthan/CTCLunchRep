@@ -15,7 +15,7 @@ class UserinfoController < ApplicationController
   end
   
   def index
-    @user=Userlogindetails.new(params[:userlogindetails])
+    @user=Userlogindetails.new(params[:userlogindetail])
     currentuser=Userlogindetails.find_by_id(session[:user_id])
     @currentuser=currentuser
     respond_to do |format|
@@ -29,7 +29,7 @@ class UserinfoController < ApplicationController
     respond_to do|format|
       format.html    
     if request.post?
-      @user=Userlogindetails.new(params[:userlogindetails])
+      @user=Userlogindetails.new(params[:userlogindetail])
       userinfo=Userlogindetails.find_by_useremail_and_userpassword(@user.useremail,@user.userpassword)
       if userinfo
         session[:user_id]=userinfo.id
@@ -54,7 +54,7 @@ class UserinfoController < ApplicationController
       format.json {render json @user}
       
     if request.post?
-      @user = Userlogindetails.new(params[:userlogindetails])
+      @user = Userlogindetails.new(params[:userlogindetail])
       if @user.save       
          #format.html { redirect_to :action=>'index'}
          #format.html { redirect_to(@user, :notice => 'User was successfully created.') }

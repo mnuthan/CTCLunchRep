@@ -24,7 +24,7 @@
         
           <% unless session[:user_id] %>
           <%= link_to_unless_current "Register", :controller => "userinfo", 
-                                                   :action => "new" %> |
+                                                   :action => "register" %> |
 		   
             <%= link_to_unless_current "Sign-in",  :controller => "userinfo", 
                                                  :action => "login" %> 
