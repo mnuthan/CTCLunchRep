@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= controller.action_name%></title>
+  <%= stylesheet_link_tag    'application' %>   
+ 
+</head>
+<body>
+	
+	<div id="page">
+    <div class="headerlogo">CTC Pvt Ltd.</div>
+       <div id="nav">
+        <div style="float:left;text-align:left">
+		<% unless session[:user_id] %>
+          <%= link_to_unless_current "Home",  :controller => "home", 
+                                                 :action => "index" %> | 
+          <%= link_to_unless_current "About Us",:controller => "home", 
+                                                 :action => "aboutus" %> |
+          <%= link_to_unless_current "Contact Us",:controller => "home", 
+                                                 :action => "contactus" %>
+                                                 <% end %>
+        </div>
+        <div style="text-align:right">
+        
+          <% unless session[:user_id] %>
+          <%= link_to_unless_current "Register", :controller => "userinfo", 
+                                                   :action => "new" %> |
+		   
+            <%= link_to_unless_current "Sign-in",  :controller => "userinfo", 
+                                                 :action => "login" %> 
+          <% else %>
+            <%= link_to_unless_current "Logout", :controller => "userinfo", 
+                                                    :action => "logout" %>
+          <% end %>
+        </div>
+      </div>
+      <div id="content">
+      	<% if flash[:notice] -%>
+        	<p style="color: green"><%= flash[:notice] %></p>
+		<% end -%>
+        <%= yield %>
+      </div>
+    </div>
+<div id="footer">
+	<p>&copy; 2012-2012 Maintained By CTC Pvt.Ltd </p>
+</div>
+</body>
+</html>

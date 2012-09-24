@@ -1,0 +1,2 @@
+module CtcWelcomeHelper
+end

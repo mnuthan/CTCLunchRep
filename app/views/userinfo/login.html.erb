@@ -1,0 +1,36 @@
+
+<%= form_for(:userlogindetail) do |f| %>
+    
+<div id="forms">  
+ <table id="tablealign" cellpadding="5" cellspacing="5">
+ 	<tr>
+ 		<th colspan="2">Login</th>
+ 	</tr> 	
+ 	<tr>
+ 		<td>
+   <%= f.label :useremail,"Email"%>			
+ 		</td>
+ 		<td>
+ 	<%= f.text_field :useremail,:class=>"text" %>		
+ 		</td>
+ 	</tr>
+ 	<tr>
+ 		<td>
+   <%= f.label :userpassword, "Password"%>			
+ 		</td>
+ 		<td>
+ 	<%= f.password_field :userpassword  %>		
+ 		</td>
+ 	</tr>
+ 	
+ 	<tr>
+ 		<td colspan="2" align="center">
+ 	<%= f.submit "Sign-in" %>		
+ 		</td>
+ 	</tr>
+ </table>    
+  </div>
+<% end %>
+
+
+

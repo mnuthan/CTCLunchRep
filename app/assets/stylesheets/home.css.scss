@@ -1,0 +1,72 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.headerlogo
+{
+  background-color:black;
+  color:white;
+  font-Weight:bold;  
+  padding:5px;
+  font-family: Pristina;
+  font-size:20px;    
+}
+#weclomenote{  
+ height:250px;
+ padding:10px;
+ margin-top:30px;
+ margin-bottom:30px;
+ margin-left:350px;  
+}
+#welcome 
+{
+  padding:8px;
+  float:left;
+  padding-left:10px;
+  width:60%;
+  border-radius:10px;
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border:2px solid #DAA520;
+}
+#welcome ul li span.listitem
+{
+  color:red;
+  font-Weight:bold;
+  
+
+} 
+
+#loignpage table
+{   
+  text-align:center;
+  padding:50px;
+  margin-left:840px;  
+  border-radius:10px;
+  -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border:2px solid black;
+  
+}
+#footer P
+{  
+  margin-bottom:10px;  
+  background-color:#F8F8F8;
+  border-top:2px solid silver;
+  text-align:center;
+  font-Weight:bold;
+}
+#background table
+{
+ 
+background-color: #F8F8F8 ;
+ border-radius:10px;
+  -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border:2px solid black; 
+ padding:30px;
+  margin-left:450px;
+}
+.text
+{
+  border:2px solid green;
+}
