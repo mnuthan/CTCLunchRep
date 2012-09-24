@@ -9,8 +9,9 @@
 	
 	<div id="page">
     <div class="headerlogo">CTC Pvt Ltd.</div>
-       <div id="nav">
-        <div style="float:left;text-align:left">
+       <div id="nav" class="one-edge-shadow">
+        <div style="float:left;text-align:left" >
+        	
 		<% unless session[:user_id] %>
           <%= link_to_unless_current "Home",  :controller => "home", 
                                                  :action => "index" %> | 
@@ -41,8 +42,9 @@
         <%= yield %>
       </div>
     </div>
-<div id="footer">
+<div id="footer" >
 	<p>&copy; 2012-2012 Maintained By CTC Pvt.Ltd </p>
 </div>
+
 </body>
 </html>

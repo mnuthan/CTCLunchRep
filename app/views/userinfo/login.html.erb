@@ -1,17 +1,18 @@
 
 <%= form_for(:userlogindetail) do |f| %>
     
-<div id="forms">  
+<div id="forms" class="shadow">
+	 
  <table id="tablealign" cellpadding="5" cellspacing="5">
  	<tr>
- 		<th colspan="2">Login</th>
+ 		<th colspan="2" class="blur">Login</th>
  	</tr> 	
  	<tr>
  		<td>
    <%= f.label :useremail,"Email"%>			
  		</td>
  		<td>
- 	<%= f.text_field :useremail,:class=>"text" %>		
+ 	<%= f.text_field :useremail,:class=>"curved" %>		
  		</td>
  	</tr>
  	<tr>
@@ -19,18 +20,17 @@
    <%= f.label :userpassword, "Password"%>			
  		</td>
  		<td>
- 	<%= f.password_field :userpassword  %>		
+ 	<%= f.password_field :userpassword,:class=>"curved"  %>		
  		</td>
  	</tr>
  	
  	<tr>
  		<td colspan="2" align="center">
- 	<%= f.submit "Sign-in" %>		
+ 	<%= f.submit "Sign-in",:class=>"curvedbtn" %>		
  		</td>
  	</tr>
  </table>    
   </div>
 <% end %>
-
 
 

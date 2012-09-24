@@ -15,8 +15,8 @@ class UserinfoController < ApplicationController
   end
   
   def index
-    @user=Userlogindetails.new(params[:userlogindetail])
-    currentuser=Userlogindetails.find_by_id(session[:user_id])
+    @user=Userlogindetail.new(params[:userlogindetail])
+    currentuser=Userlogindetail.find_by_id(session[:user_id])
     @currentuser=currentuser
     respond_to do |format|
       format.html
@@ -29,8 +29,8 @@ class UserinfoController < ApplicationController
     respond_to do|format|
       format.html    
     if request.post?
-      @user=Userlogindetails.new(params[:userlogindetail])
-      userinfo=Userlogindetails.find_by_useremail_and_userpassword(@user.useremail,@user.userpassword)
+      @user=Userlogindetail.new(params[:userlogindetail])
+      userinfo=Userlogindetail.find_by_useremail_and_userpassword(@user.useremail,@user.userpassword)
       if userinfo
         session[:user_id]=userinfo.id
        # flash[:notice]="User #{userinfo.username} logged in."        
@@ -48,13 +48,13 @@ class UserinfoController < ApplicationController
 #Post Method of HTTP
 
   def register
-    @user=Userlogindetails.new    
+    @user=Userlogindetail.new    
     respond_to do |format|
       format.html
       format.json {render json @user}
       
     if request.post?
-      @user = Userlogindetails.new(params[:userlogindetail])
+      @user = Userlogindetail.new(params[:userlogindetail])
       if @user.save       
          #format.html { redirect_to :action=>'index'}
          #format.html { redirect_to(@user, :notice => 'User was successfully created.') }
