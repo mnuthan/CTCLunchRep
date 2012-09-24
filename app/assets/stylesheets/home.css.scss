@@ -10,26 +10,25 @@
   font-family: Pristina;
   font-size:20px;    
 }
-#weclomenote{  
+#weclomenote{ 
+   
  height:250px;
  padding:10px;
- margin-top:30px;
- margin-bottom:30px;
- margin-left:350px;  
+ margin:30px;;
+
 }
 #welcome 
 {
-  padding:8px;
-  float:left;
-  padding-left:10px;
-  width:60%;
+    
+  padding:8px;    
   border-radius:10px;
   -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
-border:2px solid #DAA520;
+
 }
 #welcome ul li span.listitem
 {
+  
   color:red;
   font-Weight:bold;
   
@@ -66,7 +65,46 @@ background-color: #F8F8F8 ;
  padding:30px;
   margin-left:450px;
 }
-.text
+.curved
+{
+  border-radius:10px;
+  -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border:1px solid black;  
+}
+
+.curved:hover
 {
   border:2px solid green;
+}
+.curvedbtn
+{
+  
+  border-radius:10px;
+  -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border:1px solid black;
+  width:100px;
+  
+}
+.curvedbtn:hover
+{
+  border:2px solid orange;
+  font-weight:bold;
+}
+
+.shadow {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+label
+{
+  font-weight:bold;
+}
+.blur
+{
+   font-size:20px;
+   
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
