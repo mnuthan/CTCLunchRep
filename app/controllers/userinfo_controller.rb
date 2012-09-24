@@ -1,18 +1,18 @@
 class UserinfoController < ApplicationController
   layout "Commonlayout"
   
-  before_filter :protect,:except =>[:login,:register]
+  #before_filter :protect,:except =>[:login,:register]
  
  # the below action executes every time but excepts on login and register time because it is used on new or already logged users
  # and it is executes remaining actions which is in this controller.  
  #Notice that in case of refusal, the protect function returns false. This is the signal for the framework not to go on with a normal action. 
-  def protect
-    unless session[:user_id]
-      flash[:notice] = "Please login first"
-      redirect_to :action => 'login'
-    return false
-    end 
-  end
+  #def protect
+   # unless session[:user_id]
+   #  flash[:notice] = "Please login first"
+    #  redirect_to :action => 'login'
+   # return false
+   # end 
+ # end
   
   def index
     @user=Userlogindetail.new(params[:userlogindetail])
@@ -32,7 +32,7 @@ class UserinfoController < ApplicationController
       @user=Userlogindetail.new(params[:userlogindetail])
       userinfo=Userlogindetail.find_by_useremail_and_userpassword(@user.useremail,@user.userpassword)
       if userinfo
-        session[:user_id]=userinfo.id
+       # session[:user_id]=userinfo.id
        # flash[:notice]="User #{userinfo.username} logged in."        
         redirect_to :action=>'index'
         return
@@ -59,7 +59,7 @@ class UserinfoController < ApplicationController
          #format.html { redirect_to :action=>'index'}
          #format.html { redirect_to(@user, :notice => 'User was successfully created.') }
          #session[:login]=1 
-         session[:user_id]=@user.id         
+        # session[:user_id]=@user.id         
         # flash[:notice] = "User with login #{@user.username} created successfully!"
          redirect_to :action=>'index'
          return
@@ -73,7 +73,7 @@ class UserinfoController < ApplicationController
   end
  end
  def logout
-   session[:user_id]=nil
+   #session[:user_id]=nil
    flash[:notice]="User Logged out."
    redirect_to :controller=>'home',:action=>'index'
    

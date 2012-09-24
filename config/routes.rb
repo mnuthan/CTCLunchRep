@@ -4,6 +4,7 @@ CTCLunchRep::Application.routes.draw do
   get "userinfo/login"
 
   get "userinfo/register"
+  
 
   get "home/index"
 
